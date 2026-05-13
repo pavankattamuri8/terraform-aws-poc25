@@ -11,7 +11,7 @@ resource "aws_security_group" "sg" {
 
 resource "aws_instance" "this" {
   ami           = var.ami_id
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   subnet_id     = var.subnet_id
   security_groups = [aws_security_group.sg.id]
 }
